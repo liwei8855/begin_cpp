@@ -10,35 +10,38 @@
 #include "SortHelper.hpp"
 #import <objc/message.h>
 #import "Person.h"
+#import "test1.hpp"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        test t = new test1();
+        
     }
     return 0;
 }
 
-int movesToMakeZigzag(int* nums, int numsSize){
-    int n=sizeof(nums),i,j,s=0,t=0;
-    for(i=0;i<n;i+=2)//以偶数位元素为中心元素，使中心元素最小
-    {
-        j=0;
-        if(i)
-            j=MAX(j,nums[i]-nums[i-1]+1);
-        if(i+1<n)
-            j=Max(j,nums[i]-nums[i+1]+1);
-        s+=j;
-    }
-    for(i=1;i<n;i+=2)//以奇数位为中心元素，使中心元素最小
-    {
-        j=0;
-        if(i)j=Max(j,nums[i]-nums[i-1]+1);
-        if(i+1<n)j=max(j,nums[i]-nums[i+1]+1);
-        t+=j;
-    }
-    return min(s,t);
-}
+//int movesToMakeZigzag(int* nums, int numsSize){
+//    int n=sizeof(nums),i,j,s=0,t=0;
+//    for(i=0;i<n;i+=2)//以偶数位元素为中心元素，使中心元素最小
+//    {
+//        j=0;
+//        if(i)
+//            j=MAX(j,nums[i]-nums[i-1]+1);
+//        if(i+1<n)
+//            j=Max(j,nums[i]-nums[i+1]+1);
+//        s+=j;
+//    }
+//    for(i=1;i<n;i+=2)//以奇数位为中心元素，使中心元素最小
+//    {
+//        j=0;
+//        if(i)j=Max(j,nums[i]-nums[i-1]+1);
+//        if(i+1<n)j=max(j,nums[i]-nums[i+1]+1);
+//        t+=j;
+//    }
+//    return min(s,t);
+//}
 
-- (void)test {
+//- (void)test {
     
     //        Person *p = [Person alloc];
     //        p = [p init];
@@ -79,7 +82,7 @@ int movesToMakeZigzag(int* nums, int numsSize){
     //            });
     //        }
     //        NSLog(@"finish");
-}
+//}
 
 void sortArray() {
     NSArray *array = @[@"b",@"f",@"a",@"e",@"g"];
