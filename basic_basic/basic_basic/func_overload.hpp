@@ -9,5 +9,9 @@
 #define func_overload_hpp
 
 #include <stdio.h>
+#include <iostream>
+
+double sum(int a,double b);
+double sum(double a, int b);
 
 #endif /* func_overload_hpp */
